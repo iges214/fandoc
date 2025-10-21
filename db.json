@@ -1,0 +1,198 @@
+{
+    "toys":[
+     {
+        "id": 1,
+        "name": "Single Rose Sucker",
+        "category": ["Roses", "Suckers", "Vibrators", "Women"],
+        "price": 31000,
+        "image": "1.jpg",
+        "description": "Elegant rose-shaped vibrator with 10 vibration patterns",
+        "features": ["Waterproof", "Whisper Quiet", "USB Charging"]
+    },
+      {
+        "id": 2,
+        "name": "2in1 Rose Sucker",
+        "category": ["Roses", "Suckers", "Vibrators", "Women"],
+        "price": 40000,
+        "image": "2.jpg",
+        "description": "Elegant rose-shaped vibrator with 10 vibration patterns",
+        "features": ["Waterproof", "Whisper Quiet", "USB Charging"]
+    },
+      {
+        "id": 3,
+        "name": "Cockring",
+        "category": ["Cockrings", "Vibrators", "Men", "Couples", "Women"],
+        "price": 15000,
+        "image": "3.jpg",
+        "description": "Elegant Cockring vibrator with 10 vibration patterns",
+        "features": ["Waterproof", "Whisper Quiet", "USB Charging"]
+    }, 
+      {
+        "id": 4,
+        "name": "15pcs BDSM Set",
+        "category": ["BDSM", "Couples", "Men", "Women"],
+        "price": 35000,
+        "image": "4.webp",
+        "description": "15psc BDSM Set for Couples",
+        "features": ["Safe", "Durable", "Comfortable", "Easy to Use", "Adjustable"]
+    }, 
+      {
+        "id": 5,
+        "name": "Bedroom Battle Game",
+        "category": ["Games", "Men", "Women", "Couples"],
+        "price": 15000,
+        "image": "5.jpg",
+        "description": "Exciting bedroom battle game for couples to spice up their intimate moments.",
+        "features": ["Easy to play", "Erotic"]
+    }, 
+      {
+        "id": 6,
+        "name": "Erotic Dice",
+        "category": ["Games", "Couples"],
+        "price": 10000,
+        "image": "6.jpeg",
+        "description": "Glow in the dark erotic dice game for couples",
+        "features": ["Glows in the dark", "Erotic", "Sexual"]
+    },
+      {
+        "id": 7,
+        "name": "Silver Bullet Vibrator",
+        "category": ["Vibrators", "Women", "Couples"],
+        "price": 15000,
+        "image": "7.jpg",
+        "description": "powerful bullet vibrator with 10 different modes of vibrations for the clit/g-spot",
+        "features": ["Waterproof", "10 Vibrating modes", "USB Charging"]
+    },
+      {
+        "id": 8,
+        "name": "G-Spot Dildo Vibrator",
+        "category": ["Vibrators", "Dildos", "Women", "2 in 1"],
+        "price": 30000,
+        "image": "8.jpg",
+        "description": "powerful 2 in 1 Vibrator/Dildo with different modes of vibrations",
+        "features": ["Waterproof", "Vibrator/Dildo", "USB Charging"]
+    },
+      {
+        "id": 9,
+        "name": "Pretty Love Sam",
+        "category": ["Vibrators", "Suckers", "Dildos", "Women", "2 in 1"],
+        "price": 35000,
+        "image": "9.jpg",
+        "description": "Elegant 3 in 1 vibrator/Dildo/Sucker with different vibrating patterns",
+        "features": ["Waterproof", "Dildo/Vibrator/Sucker", "USB Charging"]
+    },
+     {
+        "id": 10,
+        "name": "Round Head Wand",
+        "category": ["Vibrators", "Women"],
+        "price": 20000,
+        "image": "10.jpg",
+        "description": "Elegant round-head vibrator with 10 vibrating patterns",
+        "features": ["Waterproof", "Vibrator", "USB Charging"]
+    },
+      {
+        "id": 11,
+        "name": "Honey Finger (PrettyLove Vance)",
+        "category": ["Vibrators", "Men", "Women"],
+        "price": 24000,
+        "image": "11.jpg",
+        "description": "G-spot Massager with 10 vibrating patterns",
+        "features": ["Waterproof", "Silicon", "Battery operated"]
+    },
+      {
+        "id": 12,
+        "name": "Spiked Ankle Cuffs",
+        "category": ["BDSM", "Men", "Women", "Couples"],
+        "price": 13000,
+        "image": "12.jpg",
+        "description": "Elegant 2 in 1 ankle cuffs",
+        "features": ["Safe", "Sexual", "Comfortable", "Durable"]
+    },
+      {
+        "id": 13,
+        "name": "Dildo KOS",
+        "category": ["Dildos", "Women"],
+        "price": 45000,
+        "image": "13.jpg",
+        "description": "Giantman vibrating dildo with different modes of vibrations and remote operated",
+        "features": ["Waterproof", "7.5inch", "USB Charging", "remote operated"]
+    },
+      {
+        "id": 14,
+        "name": "50 Postions of Bondage",
+        "category": ["Games", "Couples"],
+        "price": 10500,
+        "image": "14.jpeg",
+        "description": "A game used by couples with Bondage equipment or common clothing item such as belts, neck ties, scarves.",
+        "features": ["For Couples", "Safe", "Erotic", "Sexual"]
+    },
+      {
+        "id": 15,
+        "name": "LoveToy Ijoy Pant Remote Vibrator",
+        "category": ["Vibrators", "Men", "Women", "Couples"],
+        "price": 31000,
+        "image": "15.jpeg",
+        "description": "Pant Vibrator with remote controller, comes with the thong, Vibrator and remote. for couples who wish to imporve their sexual lives",
+        "features": ["Waterproof", "Whisper Quiet", "USB Charging", "One size fit most", "Bullet Lenght: 3 inches"]
+    },
+     {
+        "id": 16,
+        "name": "Ingen 8.5 Strapon and Dildo",
+        "category": ["Strapon", "Dildos", "Women"],
+        "price": 31000,
+        "image": "16.jpg",
+        "description": "Elegant rose-shaped vibrator with 10 vibration patterns",
+        "features": ["Waterproof", "Easy to wear", "Adjustable", "8.5", "Strap Belt + Dildo", "Color: Black"]
+    },
+      {
+        "id": 17,
+        "name": "Single Butt Plug",
+        "category": ["Men", "Women", "Couples", "Anal Plugs"],
+        "price": 8000,
+        "image": "17.jpg",
+        "description": "silver and purple Butt plug",
+        "features": ["Waterproof"]
+    },
+      {
+        "id": 18,
+        "name": "Vibrator Wand",
+        "category": ["Vibrators", "Wand", "Women"],
+        "price": 18000,
+        "image": "18.jpg",
+        "description": "Elegant Wand vibrator with 10 vibration patterns",
+        "features": ["Waterproof", "Whisper Quiet", "USB Charging", "Easy to Use", "Safe"]
+    },
+      {
+        "id": 19,
+        "name": "Talk, Dare, Flirt",
+        "category": ["Games", "Couples"],
+        "price": 15000,
+        "image": "19.jpg",
+        "description": "A Couples 3 in 1 Game to spice up your relationship",
+        "features": ["Talk with your partner", "Flirt with your partner", "Dare your partner"]
+    }
+],
+"categories":[
+    {"id": 1, "name": "Games"},
+    {"id": 2, "name": "BDSM"},
+    {"id": 3, "name": "Strapon"},
+    {"id": 4, "name": "Wand"},
+    {"id": 5, "name": "Vibrators"},
+    {"id": 6, "name": "Suckers"},
+    {"id": 7, "name": "Dildos"},
+    {"id": 8, "name": "2 in 1"},
+    {"id": 9, "name": "Masturbator"},
+    {"id": 10, "name": "Roses"},
+    {"id": 11, "name": "Anal Plugs"},
+    {"id": 12, "name": "Cockrings"},
+    {"id": 13, "name": "Lubes & Cream"},
+    {"id": 14, "name": "Men"},
+    {"id": 15, "name": "Women"},
+    {"id": 16, "name": "Couples"}
+],
+"slider":[
+{"id": 1, "image": ""},
+{"id": 1, "image": ""},
+{"id": 1, "image": ""}
+]
+}

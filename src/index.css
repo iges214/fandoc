@@ -1,0 +1,27 @@
+/* CSS HEX */
+root {
+  --fandango: #b10680ff;
+  --purple: #800083ff;
+  --black: #000000ff;
+  --mexican-pink: #eb0b7bff;
+  --white: #ffffffff;
+  --rose: #f20077ff;
+  --black-2: #000000ff;
+  --purple-2: #7a0184ff;
+
+  /* CSS HSL */
+  /* --fandango: hsla(317, 93%, 36%, 1);
+--purple: hsla(299, 100%, 26%, 1);
+--black: hsla(0, 0%, 0%, 1);
+--mexican-pink: hsla(330, 91%, 48%, 1);
+--white: hsla(0, 0%, 100%, 1);
+--rose: hsla(330, 100%, 47%, 1);
+--black-2: hsla(0, 0%, 0%, 1);
+--purple-2: hsla(295, 98%, 26%, 1); */
+}
+
+body {
+  background-color: rgb(224, 224, 224);
+  margin: 0;
+  /* padding: 0 3rem; */
+}

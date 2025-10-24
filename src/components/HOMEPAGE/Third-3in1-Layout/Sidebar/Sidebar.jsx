@@ -50,10 +50,6 @@ export default function Sidebar ({ onCategorySelect, selectedCategory }) {
     onCategorySelect(categoryName);
   };
 
-  const handleViewAll = () => {
-    onCategorySelect('');
-  };
-
   return (
     <div className="sidebar">
       <div className="sidebar-header">
@@ -62,16 +58,6 @@ export default function Sidebar ({ onCategorySelect, selectedCategory }) {
       </div>
 
       <div className="categories-list">
-        <div className="category-item">
-          <button
-            className={`category-button ${!selectedCategory ? 'active' : ''}`}
-            onClick={handleViewAll}
-          >
-            <span className="category-icon">🏠</span>
-            <span className="category-name">All Products</span>
-          </button>
-        </div>
-
         {categories.map(category => (
           <div key={category.id} className="category-item">
             <button
@@ -91,12 +77,6 @@ export default function Sidebar ({ onCategorySelect, selectedCategory }) {
         <div className="sidebar-promo">
           <p>🔞</p>
         </div>
-        <button 
-          className="view-all-btn"
-          onClick={handleViewAll}
-        >
-          View All Products
-        </button>
       </div>
     </div>
   );

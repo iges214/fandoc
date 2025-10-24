@@ -12,7 +12,7 @@
   align-items: center;
   gap: 1rem;
 }
-
+/* 
 .menu-button {
   background: none;
   border: none;
@@ -27,6 +27,35 @@
 
 .menu-button:hover {
   background-color: rgba(0, 0, 0, 0.1);
+} */
+/* Home Button Styles */
+.home-button {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  background: linear-gradient(135deg, #800083ff, #f20077ff) !important;
+  color: white !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 25px !important;
+  font-weight: 600 !important;
+  font-size: 0.9rem !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 12px rgba(128, 0, 131, 0.3) !important;
+}
+
+.home-button:hover {
+  background: linear-gradient(135deg, #f20077ff, #800083ff) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(255, 105, 180, 0.4) !important;
+}
+
+.home-button span {
+  color: white !important;
+}
+
+/* Ensure the menu button has proper spacing when empty */
+.menu-button:empty {
+  min-width: 40px;
 }
 
 .logo {

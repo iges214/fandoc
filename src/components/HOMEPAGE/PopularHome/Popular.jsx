@@ -1,9 +1,10 @@
+
 import React from 'react';
 import '../Styles.css';
 import { useNavigate } from 'react-router-dom';
 import { useToys } from '../../Hooks/UseData';
 
-export default function PopularProducts() {
+export default function PopularProducts({onSeeAll}) {
   const navigate = useNavigate();
   const { toys, loading, error } = useToys();
 
@@ -24,10 +25,10 @@ export default function PopularProducts() {
     return (
       <div className="popular-products">
         <div className="popular-header">
-          <h2 className="popular-title">Popular</h2>
+          <h2 className="popular-title">Vibrators</h2>
         </div>
         <div className="loading" style={{padding: '40px', textAlign: 'center'}}>
-          Loading popular products...
+          Loading Vibrator products...
         </div>
       </div>
     );
@@ -37,7 +38,7 @@ export default function PopularProducts() {
     return (
       <div className="popular-products">
         <div className="popular-header">
-          <h2 className="popular-title">Popular</h2>
+          <h2 className="popular-title">Vibrators</h2>
         </div>
         <div className="error" style={{padding: '40px', textAlign: 'center'}}>
           Error loading products
@@ -47,13 +48,16 @@ export default function PopularProducts() {
   }
 
   return (
-    <div className="popular-products">
+     <div className="popular-products">
       <div className="popular-header">
         <div className="header-left">
           <h2 className="popular-title">Vibrators</h2>
         </div>
         <div className="header-right">
-          <button className="see-all-btn">
+          <button 
+            className="see-all-btn"
+            onClick={() => onSeeAll('Vibrators')}
+          >
             see all ›
           </button>
         </div>
@@ -91,3 +95,4 @@ export default function PopularProducts() {
     </div>
   );
 }
+

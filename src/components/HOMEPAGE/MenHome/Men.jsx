@@ -3,7 +3,7 @@ import '../Styles.css';
 import { useNavigate } from 'react-router-dom';
 import { useToys } from '../../Hooks/UseData';
 
-export default function Men() {
+export default function Men({onSeeAll }) {
   const navigate = useNavigate();
   const { toys, loading, error } = useToys(); // Get all toys
 
@@ -46,13 +46,16 @@ export default function Men() {
   }
 
   return (
-    <div className="popular-products">
+      <div className="popular-products">
       <div className="popular-header">
         <div className="header-left">
           <h2 className="popular-title">For Him</h2>
         </div>
         <div className="header-right">
-          <button className="see-all-btn">
+          <button 
+            className="see-all-btn"
+            onClick={() => onSeeAll('Men')}
+          >
             see all ›
           </button>
         </div>
@@ -88,3 +91,4 @@ export default function Men() {
     </div>
   );
 }
+

@@ -53,6 +53,7 @@
 /* Active state for current page */
 .mobile-nav-item.active {
   background: linear-gradient(135deg, #800083ff, #f20077ff);
+  padding: 7px 5px;
 }
 
 .mobile-nav-item.active .mobile-nav-icon,

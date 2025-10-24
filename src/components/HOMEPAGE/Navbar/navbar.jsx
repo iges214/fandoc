@@ -1,10 +1,9 @@
 import "./navbar.css"
 import { useState } from "react"
-import {Menu, Search, ShoppingCart, User, ChevronDown, HelpCircle, Settings, LogOut, MessageCircle, FileText, Info, LogIn, UserPlus} from "lucide-react"
+import {Menu, Search, ShoppingCart, User, ChevronDown, HelpCircle, Settings, LogOut, MessageCircle, FileText, Info, LogIn, UserPlus, Home} from "lucide-react"
 
-
-export default function Navbar() {
-    const [menuOpen, setMenuOpen] = useState(false)
+export default function Navbar({ onHomeClick, showHomeButton = false }) {
+    // const [menuOpen, setMenuOpen] = useState(false)
     const [isAccountOpen, setIsAccountOpen] = useState(false)
     const[isHelpOpen, setIsHelpOpen] = useState(false)
     const [search, setSearch] = useState("")
@@ -19,26 +18,49 @@ export default function Navbar() {
         // i will Implement search functionality/logic here later
     };
 
+    const handleHomeClick = () => {
+        if (onHomeClick) {
+            onHomeClick();
+        }
+    };
+
     return (
         <nav className="navbar">
 
             {/* left section: menu and logo */}
             <div className="navbar-left">
-                <button className="menu-button" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle Menu">
-                    <Menu size={24}/>
-                </button>
+                {/* Show HOME button when in category view, otherwise show empty menu button */}
+                {showHomeButton ? (
+                    <button 
+                        className="menu-button home-button" 
+                        onClick={handleHomeClick}
+                        aria-label="Go to Home"
+                    >
+                        <Home size={20} />
+                        <span>HOME</span>
+                    </button>
+                ) : (
+                  <span></span>
+                    // <button className="menu-button"> 
+                    //     {/* Empty button for normal layout */}
+                    // </button>
+                )}
 
                 {/* img logo */}
                 <a className="logo">
-                    <img src="/fandocImgLOGO.png
-                    " alt="fandoc logo" className="logo-img"/>
+                    <img src="/fandocImgLOGO.png" alt="fandoc logo" className="logo-img"/>
                 </a>
             </div>
 
             {/* middle section which is the search button */}
             <div className="navbar-search">
                 <form className="search-form" onSubmit={handleSearchSubmit}>
-                    <input type="text" className="seacrh-input" placeholder="Search Fantasy Doctor" value={search} onChange={(e) => setSearch(e.target.value)}
+                    <input 
+                        type="text" 
+                        className="seacrh-input" 
+                        placeholder="Search Fantasy Doctor" 
+                        value={search} 
+                        onChange={(e) => setSearch(e.target.value)}
                     />
                     <button type="submit" className="search-button" aria-label="Search">
                         <Search size={20}/>
@@ -51,7 +73,11 @@ export default function Navbar() {
 
                 {/* ACCOUNT and its dropdown menu */}
                 <div className="dropdown">
-                    <button className="Account-btn" onClick={()=> setIsAccountOpen(!isAccountOpen)} onBlur={()=> setIsAccountOpen((false), 150)}>
+                    <button 
+                        className="Account-btn" 
+                        onClick={()=> setIsAccountOpen(!isAccountOpen)} 
+                        onBlur={()=> setIsAccountOpen((false), 150)}
+                    >
                         <User size={20}/>
                         <span>Account</span>
                         <ChevronDown size={16} className={`dropdown-arrow ${isAccountOpen ? "open" : ' '}`}/>
@@ -83,7 +109,7 @@ export default function Navbar() {
                     <button className="Account-btn" 
                       onClick={() => setIsHelpOpen(!isHelpOpen)}
                       onBlur={() => setTimeout(() => setIsHelpOpen(false), 150)}
-          >
+                    >
                       <HelpCircle size={20} />
                       <span>Help</span>
                       <ChevronDown size={16} className={`dropdown-arrow ${isHelpOpen ? 'open' : ''}`} />
@@ -109,17 +135,13 @@ export default function Navbar() {
 
                   {/* cart */} 
                   <button className="Account-btn cart-btn">
-                    <ShoppingCart size={20} 
-                    />
+                    <ShoppingCart size={20} />
                      {cartItemsCount > 0 && (
                       <span className="cart-badge">{cartItemsCount}</span>
                     )}
                     <span>Cart</span>
-                   
                   </button>
-                
             </div>
-
         </nav>
     )
 }

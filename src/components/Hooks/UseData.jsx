@@ -28,7 +28,7 @@ export const useCategories = () => {
   return { categories, loading, error };
 };
 
-export const useToys = (category = '') => {
+export const useToys = (categories = []) => {
   const [allToys, setAllToys] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -52,19 +52,55 @@ export const useToys = (category = '') => {
     fetchToys();
   }, []);
 
-  // Filter toys based on category
-  const filteredToys = category 
+  // Filter toys based on categories array
+  const filteredToys = categories.length > 0 
     ? allToys.filter(toy => {
-        // console.log('Toy categories:', toy.category, 'Looking for:', category);
-        return toy.category.includes(category);
+        // Check if toy belongs to any of the specified categories
+        return categories.some(category => toy.category.includes(category));
       })
     : allToys;
-
-  // console.log('Filtered toys for', category, ':', filteredToys.length);
 
   return { 
     toys: filteredToys, 
     loading, 
     error 
+  };
+};
+
+// New hook to get toys by multiple categories with separate arrays
+export const useToysByMultipleCategories = (categories = []) => {
+  const [allToys, setAllToys] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchToys = async () => {
+      try {
+        setLoading(true);
+        const response = await fetch(`${API_BASE}/toys`);
+        if (!response.ok) throw new Error('Failed to fetch Products');
+        const data = await response.json();
+        setAllToys(data);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchToys();
+  }, []);
+
+  // Return toys grouped by category
+  const toysByCategory = categories.reduce((acc, category) => {
+    acc[category] = allToys.filter(toy => toy.category.includes(category));
+    return acc;
+  }, {});
+
+  return {
+    toysByCategory,
+    allToys,
+    loading,
+    error
   };
 };

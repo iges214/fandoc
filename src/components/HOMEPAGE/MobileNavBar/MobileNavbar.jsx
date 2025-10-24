@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import './MobileNavbar.css';
 
-export default function MobileNavbar() {
+export default function MobileNavbar({ onCategoriesClick, onHomeClick, currentView = 'home' }) {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -12,29 +12,34 @@ export default function MobileNavbar() {
   }
 
   const navItems = [
-    { id: 1, name: 'Home', icon: '🏠', path: '/', isActive: true },
-    { id: 2, name: 'Categories', icon: '📁', path: '#categories' },
-    { id: 3, name: 'Account', icon: '👤', path: '/account' },
-    { id: 4, name: 'Help', icon: '❓', path: '/help' },
-    { id: 5, name: 'Cart', icon: '🛒', path: '/cart' }
+    { id: 1, name: 'Home', icon: '🏠', path: '/', view: 'home' },
+    { id: 2, name: 'Categories', icon: '📁', path: '#categories', view: 'categories' },
+    { id: 3, name: 'Account', icon: '👤', path: '/account', view: 'account' },
+    { id: 4, name: 'Help', icon: '❓', path: '/help', view: 'help' },
+    { id: 5, name: 'Cart', icon: '🛒', path: '/cart', view: 'cart' }
   ];
 
-  const handleNavClick = (path, name) => {
-    if (name === 'Categories') {
-      // Scroll to all products section
-      const productsSection = document.querySelector('.all-products-mobile');
-      if (productsSection) {
-        productsSection.scrollIntoView({ behavior: 'smooth' });
+  const handleNavClick = (path, name, view) => {
+    if (name === 'Home') {
+      if (onHomeClick) {
+        onHomeClick();
+      }
+    } else if (name === 'Categories') {
+      if (onCategoriesClick) {
+        onCategoriesClick();
       }
     } else if (path.startsWith('/')) {
       navigate(path);
     }
-    // For Home, do nothing since we're already there
   };
 
   const isActive = (item) => {
-    if (item.name === 'Home') return location.pathname === '/';
-    return false;
+    // For Home and Categories, check against currentView prop
+    if (item.name === 'Home' || item.name === 'Categories') {
+      return currentView === item.view;
+    }
+    // For other items, check against current path
+    return location.pathname === item.path;
   };
 
   return (
@@ -43,7 +48,7 @@ export default function MobileNavbar() {
         <button
           key={item.id}
           className={`mobile-nav-item ${isActive(item) ? 'active' : ''}`}
-          onClick={() => handleNavClick(item.path, item.name)}
+          onClick={() => handleNavClick(item.path, item.name, item.view)}
         >
           <span className="mobile-nav-icon">{item.icon}</span>
           <span className="mobile-nav-text">{item.name}</span>
